@@ -28,6 +28,8 @@ namespace ProjectDAL
 
         //public abstract string Error { get; }
 
+        //[Required]
+        //[MaxLength(50)]
         public string Name { get; set; }
         public string Version { get; set; }
         public string Description { get; set; }

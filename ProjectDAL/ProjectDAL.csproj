@@ -43,9 +43,6 @@
     <Reference Include="IPAddressRange, Version=4.0.0.0, Culture=neutral, PublicKeyToken=578e3c3d17e7c751, processorArchitecture=MSIL">
       <HintPath>..\packages\IPAddressRange.4.0.0\lib\net45\IPAddressRange.dll</HintPath>
     </Reference>
-    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="ReachFramework" />
@@ -64,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClass.cs" />
+    <Compile Include="FileOperations.cs" />
     <Compile Include="Computer.cs" />
     <Compile Include="Cryptography.cs" />
     <Compile Include="DatabaseOperations.cs" />
@@ -72,12 +70,10 @@
     <Compile Include="NetworkInterface.cs" />
     <Compile Include="OperatingSystem.cs" />
     <Compile Include="PM.cs" />
-    <Compile Include="Print.cs" />
-    <Compile Include="PrintToPDF.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductUser.cs" />
     <Compile Include="ProgramUser.cs" />
-    <Compile Include="ProjectContextCF.cs" />
+    <Compile Include="ProjectDBContextCF.cs" />
     <Compile Include="Software.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Vendor.cs" />

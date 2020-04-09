@@ -18,7 +18,7 @@ namespace ProjectDAL
         
         public int NwiId { get; set; }
         public NwiNames Name { get; set; }
-        public IPAddress IP { get; set; }
+        public IPAddress Ip { get; set; }
 
         public virtual Vlan Vlan { get; set; }
         public virtual Computer Computer { get; set; }
@@ -30,7 +30,7 @@ namespace ProjectDAL
             return @interface != null &&
                    NwiId == @interface.NwiId &&
                    Name == @interface.Name &&
-                   EqualityComparer<IPAddress>.Default.Equals(IP, @interface.IP) &&
+                   EqualityComparer<IPAddress>.Default.Equals(Ip, @interface.Ip) &&
                    EqualityComparer<Vlan>.Default.Equals(Vlan, @interface.Vlan);
         }
 
@@ -39,7 +39,7 @@ namespace ProjectDAL
             var hashCode = 1036811894;
             hashCode = hashCode * -1521134295 + NwiId.GetHashCode();
             hashCode = hashCode * -1521134295 + EqualityComparer<NwiNames>.Default.GetHashCode(Name);
-            hashCode = hashCode * -1521134295 + EqualityComparer<IPAddress>.Default.GetHashCode(IP);
+            hashCode = hashCode * -1521134295 + EqualityComparer<IPAddress>.Default.GetHashCode(Ip);
             hashCode = hashCode * -1521134295 + EqualityComparer<Vlan>.Default.GetHashCode(Vlan);
             return hashCode;
         }

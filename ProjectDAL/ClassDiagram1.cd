@@ -147,13 +147,12 @@
     <InheritanceLine Type="ProjectDAL.BaseClass" FixedFromPoint="true">
       <Path>
         <Point X="6" Y="11.062" />
-        <Point X="14.625" Y="11.062" />
-        <Point X="14.625" Y="9.551" />
-        <Point X="15" Y="9.551" />
+        <Point X="16.375" Y="11.062" />
+        <Point X="16.375" Y="10.473" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAgCAAAiAAAAAQAAIAAAIBgAAAAAAAAIAA=</HashCode>
+      <HashCode>AAABAAAAAAAgAAAAiAAAAAQAAIAAAIBgAAAAAAAAIAA=</HashCode>
       <FileName>Vlan.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -168,8 +167,15 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAiABAAAQAIQAAAJAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAiABAAAQAAQAAAJAAAAAAAAAAIAA=</HashCode>
       <FileName>NetworkInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectDAL.FileOperations">
+    <Position X="3.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileOperations.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="ProjectDAL.IProduct">

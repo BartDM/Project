@@ -10,10 +10,10 @@ namespace ProjectDAL
 {
 
 
-    public class ProjectContextCF:DbContext
+    public class ProjectDBContextCF:DbContext
     {
 
-        public ProjectContextCF() : base("ProjectContextCF")
+        public ProjectDBContextCF() : base("ProjectContextCF")
         { //The name of the connection string (which you'll add to the Web.config file later) is passed in to the constructor.
         }
 

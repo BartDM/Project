@@ -46,6 +46,7 @@ namespace ProjectWPF
                 
                 // Passing the Password to Encrypt method and the method will return encrypted string and stored in password variable.
                 string password = Cryptography.Encrypt(pwdLogin.Password);
+                ProgramUser user = new ProgramUser(email,password,true,"Eve","Ravignot","");
                 // decrypt test: MessageBox.Show(Cryptography.Decrypt(password));
 
                 //Controle DB no implementeren met DAL
@@ -75,6 +76,7 @@ namespace ProjectWPF
                 //---------------
                 VendorWindow win = new VendorWindow();
                 win.Username = email;
+                win.User = user;
                 win.Show();
                 
                 //win.ShowDialog();

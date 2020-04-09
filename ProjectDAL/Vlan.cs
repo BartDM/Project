@@ -22,14 +22,14 @@ namespace ProjectDAL
 
         public IPAddress IpBegin { get; set; }
         public int MaskLength { get; set; }
-        public IPAddressRange Range
-        {
-            get { return Range; }
-            set
-            {
-                Range= new IPAddressRange(IpBegin, maskLength: MaskLength);  //https://github.com/jsakamoto/ipaddressrange/blob/master/README.md
-            }
-        }
+        //public IPAddressRange Range
+        //{
+        //    get { return Range; }
+        //    set
+        //    {
+        //        Range= new IPAddressRange(IpBegin, maskLength: MaskLength);  //https://github.com/jsakamoto/ipaddressrange/blob/master/README.md
+        //    }
+        //}
 
         public virtual List<NetworkInterface> Ips { get; set; }
 

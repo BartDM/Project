@@ -96,6 +96,9 @@
     <Compile Include="VendorWindow.xaml.cs">
       <DependentUpon>VendorWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowsWindow.xaml.cs">
+      <DependentUpon>WindowsWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +132,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VendorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

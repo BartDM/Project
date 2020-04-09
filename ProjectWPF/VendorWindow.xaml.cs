@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,8 @@ namespace ProjectWPF
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            lblUser.Content = this.Username;
+            //lblUser.Content = this.Username;
+        //    lblUser.Content = this.User.FirstName + " " + this.User.LastName;
         }
 
         // overbrengen van string in login page
@@ -41,7 +43,13 @@ namespace ProjectWPF
             get { return _username; }
             set { _username = value; }
         }
-        
+        public ProgramUser User
+        {
+            get;
+            set;
+        }
+
+
         private void ListViewItem_Selected_Dashboard(object sender, RoutedEventArgs e)
         {
 
