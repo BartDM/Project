@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace ProjectDAL
+namespace Project.DAL.Model
 {
-    public class Product:BaseClass,IProduct
+    public class Product : BaseClass, IProduct
     {
         public override string this[string columnName]
         {
@@ -21,7 +16,7 @@ namespace ProjectDAL
                 {
                     return "Description should not be empty.";
                 }
-              
+
                 return "";
             }
         }
@@ -40,8 +35,8 @@ namespace ProjectDAL
         public virtual Vendor Vendor { get; set; }
         //DB 1-on-many relationship
         public virtual List<User> Users { get; set; }
-        
-        
+
+
 
 
         //Basic methodes

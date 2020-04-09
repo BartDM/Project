@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace ProjectDAL
+namespace Project.BLL.Tools
 {
     public static class Cryptography
     { // resource: https://www.c-sharpcorner.com/article/encrypt-and-decrypt-user-password-in-sql-server-db-using-c-sharp-winform-application/
