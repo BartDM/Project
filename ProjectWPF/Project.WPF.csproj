@@ -173,9 +173,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProjectDAL\ProjectDAL.csproj">
-      <Project>{BB09918A-12A0-47A4-AB4C-1340E0FD9E13}</Project>
-      <Name>ProjectDAL</Name>
+    <ProjectReference Include="..\Project.BDO\Project.BDO.csproj">
+      <Project>{e337e570-aafc-455b-83bb-cfd3b0165a83}</Project>
+      <Name>Project.BDO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.BLL\Project.BLL.csproj">
+      <Project>{4a0f9cb9-01b3-4a64-b212-cea36ae8ca45}</Project>
+      <Name>Project.BLL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

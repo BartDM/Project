@@ -13,5 +13,9 @@ namespace ProjectWPF
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            Project.BLL.AutoMapper.AutoMapperInit.Init();
+        }
     }
 }

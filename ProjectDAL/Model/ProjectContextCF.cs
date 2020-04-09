@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;  // install Entity Framework
+﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ProjectDAL
+// install Entity Framework
+
+namespace Project.DAL.Model
 {
 
 
-    public class ProjectContextCF:DbContext
+    public class ProjectContextCF : DbContext
     {
 
         public ProjectContextCF() : base("ProjectContextCF")
