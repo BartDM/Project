@@ -12,7 +12,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}" Title="MenuWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None"
+        FontFamily="{DynamicResource MaterialDesignFont}" Title="MenuWindow" Height="650" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None"
         MouseDown="Window_MouseDown" Loaded="Window_Loaded">
    <!--<GroupBox Header="Project Administration">-->
         <Grid>

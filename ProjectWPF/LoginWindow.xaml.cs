@@ -1,18 +1,7 @@
-﻿using ProjectDAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Project.BLL.Tools;
 
 namespace ProjectWPF
 {
@@ -46,6 +35,7 @@ namespace ProjectWPF
                 
                 // Passing the Password to Encrypt method and the method will return encrypted string and stored in password variable.
                 string password = Cryptography.Encrypt(pwdLogin.Password);
+                //ProgramUser user = new ProgramUser(email,password,true,"Eve","Ravignot","");
                 // decrypt test: MessageBox.Show(Cryptography.Decrypt(password));
 
                 //Controle DB no implementeren met DAL
@@ -73,9 +63,10 @@ namespace ProjectWPF
 
                 //Alternatief
                 //---------------
-                VendorWindow win = new VendorWindow();
-                win.Username = email;
-                win.Show();
+                //VendorWindow win = new VendorWindow();
+                //win.Username = email;
+                //win.User = user;
+                //win.Show();
                 
                 //win.ShowDialog();
                 this.Close();

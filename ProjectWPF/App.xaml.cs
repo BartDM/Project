@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.BLL;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,14 @@ namespace ProjectWPF
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            var locationManager = new LocationManager();
+            var test = locationManager.GetLocations();
+            foreach(var location in test)
+            {
+                Console.Write(location.Name);
+            }
+        }
     }
 }

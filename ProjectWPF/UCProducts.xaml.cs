@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Project.BDO;
+using Project.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +41,8 @@ namespace ProjectWPF
         private void radSoftware_Checked(object sender, RoutedEventArgs e)
         {
             //btnSearchProducts = "Search Software";
+            LocationManager loc = new LocationManager();
+            loc.GetLocations();
         }
 
         
