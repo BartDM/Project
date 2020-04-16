@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.BLL;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -15,7 +16,12 @@ namespace ProjectWPF
     {
         public App()
         {
-            Project.BLL.AutoMapper.AutoMapperInit.Init();
+            var locationManager = new LocationManager();
+            var test = locationManager.GetLocations();
+            foreach(var location in test)
+            {
+                Console.Write(location.Name);
+            }
         }
     }
 }

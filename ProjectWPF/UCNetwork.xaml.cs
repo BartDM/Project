@@ -1,4 +1,4 @@
-﻿using ProjectDAL;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Project.BLL;
+using Project.BDO;
+
 
 namespace ProjectWPF
 {
@@ -27,43 +30,50 @@ namespace ProjectWPF
             InitializeComponent();
         }
 
-        Vlan vlan = null;
-        Vlan vlan2 = null;
-        NetworkInterface nwi = null;
+        //Vlan vlan = null;
+        //Vlan vlan2 = null;
+        //NetworkInterface nwi = null;
 
-            List<Vlan> vlanlijst = new List<Vlan>();
-            List<NetworkInterface> nwilijst = new List<NetworkInterface>();
+        //    List<Vlan> vlanlijst = new List<Vlan>();
+        //    List<NetworkInterface> nwilijst = new List<NetworkInterface>();
 
+        public void OpvullenGridVlan()
+        {
+            NetworkManager x = new NetworkManager();
+            gridVlan.ItemsSource = x.GetNetworkInterface();
+            //gridVlan.ItemsSource = DatabaseOperations.NetworkInterface(nwiId);
+            
+        }
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            //Test opvullen classeobject
-            OpvullenVlanGrid();
+            ////Test opvullen classeobject
+            //OpvullenVlanGrid();
 
 
-            //ips
-            nwi = new NetworkInterface
-            {
-                Vlan = vlan as Vlan,
-                Name = NwiNames.PI1,
-                Ip = IPAddress.Parse("192.168.1.3")
-            };
-            nwilijst.Add(nwi);
+            ////ips
+            //nwi = new NetworkInterface
+            //{
+            //    Vlan = vlan as Vlan,
+            //    Name = NwiNames.PI1,
+            //    Ip = IPAddress.Parse("192.168.1.3")
+            //};
+            //nwilijst.Add(nwi);
 
-            nwi = new NetworkInterface
-            {
-                Vlan = vlan,
-                Name = NwiNames.PI2,
-                Ip = IPAddress.Parse("192.168.1.5")
-            };
-            nwilijst.Add(nwi);
+            //nwi = new NetworkInterface
+            //{
+            //    Vlan = vlan,
+            //    Name = NwiNames.PI2,
+            //    Ip = IPAddress.Parse("192.168.1.5")
+            //};
+            //nwilijst.Add(nwi);
 
-            nwi = new NetworkInterface
-            {
-                Vlan = vlan2 as Vlan,
-                Name = NwiNames.PI2,
-                Ip = IPAddress.Parse("192.168.2.3")
-            };
-            nwilijst.Add(nwi);
+            //nwi = new NetworkInterface
+            //{
+            //    Vlan = vlan2 as Vlan,
+            //    Name = NwiNames.PI2,
+            //    Ip = IPAddress.Parse("192.168.2.3")
+            //};
+            //nwilijst.Add(nwi);
 
             //nwi = new NetworkInterface();
             //nwi.Vlan = gridVlan.SelectedItem as Vlan;
@@ -78,27 +88,27 @@ namespace ProjectWPF
 
         private void OpvullenVlanGrid()
         {
-            vlan = new Vlan
-            {
-                IpBegin = IPAddress.Parse("192.168.1.1"),
-                Nr = 1,
-                MaskLength = 24,
-                Description = "DMZ"
-            };
-            vlanlijst.Add(vlan);
+            //vlan = new Vlan
+            //{
+            //    IpBegin = IPAddress.Parse("192.168.1.1"),
+            //    Nr = 1,
+            //    MaskLength = 24,
+            //    Description = "DMZ"
+            //};
+            //vlanlijst.Add(vlan);
 
-            vlan2 = new Vlan
-            {
-                IpBegin = IPAddress.Parse("192.168.2.1"),
-                Nr = 2,
-                MaskLength = 24,
-                Description = "Servers"
-            };
-            vlanlijst.Add(vlan2);
+            //vlan2 = new Vlan
+            //{
+            //    IpBegin = IPAddress.Parse("192.168.2.1"),
+            //    Nr = 2,
+            //    MaskLength = 24,
+            //    Description = "Servers"
+            //};
+            //vlanlijst.Add(vlan2);
 
-            //Ophalen DB info -> all
-            //In grid plaatsen
-            gridVlan.ItemsSource = vlanlijst;
+            ////Ophalen DB info -> all
+            ////In grid plaatsen
+            //gridVlan.ItemsSource = vlanlijst;
         }
 
         private void radVLAN_Checked(object sender, RoutedEventArgs e)
@@ -145,21 +155,21 @@ namespace ProjectWPF
 
         private void gridVlan_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            List<NetworkInterface> nwilijst2 = new List<NetworkInterface>();
+            //List<NetworkInterface> nwilijst2 = new List<NetworkInterface>();
 
-            if (gridVlan.SelectedItem is Vlan vl)  //VLAN1
-            {
-                foreach (var item in nwilijst)
-                {
-                    if (item.Vlan == vl)
-                    {
-                        nwilijst2.Add(item);
-                    }
-                }
-                gridNetwork.ItemsSource = null;
-                gridNetwork.ItemsSource = nwilijst2;
+            //if (gridVlan.SelectedItem is Vlan vl)  //VLAN1
+            //{
+            //    foreach (var item in nwilijst)
+            //    {
+            //        if (item.Vlan == vl)
+            //        {
+            //            nwilijst2.Add(item);
+            //        }
+            //    }
+            //    gridNetwork.ItemsSource = null;
+            //    gridNetwork.ItemsSource = nwilijst2;
                 
-            }
+            //}
             //gridNetwork.ItemsSource = nwilijst;
         }
     }
