@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Automapper\AutoMapperInit.cs" />
+    <Compile Include="Automapper\ProjectAutoMapperProfile.cs" />
     <Compile Include="LocationManager.cs" />
     <Compile Include="NetworkManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
