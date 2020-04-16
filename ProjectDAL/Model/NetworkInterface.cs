@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 
 namespace Project.DAL.Model
@@ -11,7 +12,7 @@ namespace Project.DAL.Model
 
     public class NetworkInterface:BaseClass
     {
-        
+        [Key]
         public int NwiId { get; set; }
         public NwiNames Name { get; set; }
         public IPAddress Ip { get; set; }

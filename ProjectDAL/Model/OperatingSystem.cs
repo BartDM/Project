@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Project.DAL.Model
 {
     public class OperatingSystem:Product
     {
-        public int OsId { get; set; }
+        //[Key]
+        //public int OsId { get; set; }
 
         public string Type
         {

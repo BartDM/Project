@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 using NetTools;
 
@@ -6,7 +7,7 @@ namespace Project.DAL.Model
 {
     public class Vlan:BaseClass
     {
-
+        [Key]
         public int Vlanid { get; set; }
         public int Nr { get; set; }
         public string Name()

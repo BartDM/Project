@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Project.DAL.Model
 {
     public class Software:Product
     {
-        public int Sofwareid { get; set; }
+        //[Key]
+        //public int Sofwareid { get; set; }
 
         public string Type
         {

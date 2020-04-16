@@ -1,8 +1,10 @@
-﻿namespace Project.DAL.Model
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace Project.DAL.Model
 {
     public class Location:BaseClass
     {
-        
         public override string this[string columnName]
         {
             get
@@ -20,13 +22,14 @@
             }
         }
 
+        [Key]
         public int LocId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
         //navigation properties
         //DB 1-on-1 relationship
-        public virtual Computer Computer { get; set; }
+        public virtual List<Computer> Computers { get; set; }
     }
     
 }

@@ -1,4 +1,6 @@
-﻿namespace Project.DAL.Model
+﻿using System.Collections.Generic;
+
+namespace Project.DAL.Model
 {
     public class Vendor:BaseClass
     {
@@ -22,6 +24,6 @@
 
         //navigation properties
         //DB 1-on-1 relationship
-        public virtual Product Product { get; set; }
+        public virtual List<Product> Products { get; set; }
     }
 }

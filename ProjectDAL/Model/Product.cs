@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Project.DAL.Model
 {
@@ -22,6 +23,8 @@ namespace Project.DAL.Model
         }
 
         //public abstract string Error { get; }
+        [Key]
+        public int ProdId { get; set; }
 
         //[Required]
         //[MaxLength(50)]
@@ -34,7 +37,7 @@ namespace Project.DAL.Model
         //DB 1-on-1 relationship
         public virtual Vendor Vendor { get; set; }
         //DB 1-on-many relationship
-        public virtual List<User> Users { get; set; }
+        public virtual List<ProductUser> Users { get; set; }
 
 
 
