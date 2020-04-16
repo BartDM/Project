@@ -1,22 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AutoMapper;
+﻿using AutoMapper;
 
 namespace Project.BLL.AutoMapper
 {
-    public class AutoMapperInit
-    {
-        public static IMapper Init()
-        {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile<ProjectAutoMapperProfile>();
-            });
-            return config.CreateMapper();
-        }
-    }
-
     public class ProjectAutoMapperProfile : Profile
     {
         public ProjectAutoMapperProfile()
@@ -40,7 +25,7 @@ namespace Project.BLL.AutoMapper
 
             CreateMap<DAL.Model.Vlan, BDO.Vlan>();           
             CreateMap<DAL.Model.NetworkInterface, BDO.NetworkInterface>()
-               .ForMember(s => s.NetworkInterfaceId, opt => opt.MapFrom(l => l.NwiId));
+                .ForMember(s => s.NetworkInterfaceId, opt => opt.MapFrom(l => l.NwiId));
             
         }
     }

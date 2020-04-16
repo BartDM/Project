@@ -14,7 +14,7 @@ namespace Project.DAL.Model
         public virtual Location Location { get; set; }
         //DB 1-on-many relationship
         public virtual List<Software> Softwares { get; set; }
-        public virtual List<NetworkInterface> Netwerkinterfaces { get; set; }
+        public virtual List<NetworkInterface> NetworkInterfaces { get; set; }
         
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Project.DAL;
 
 namespace Project.BLL
 {
@@ -19,17 +20,18 @@ namespace Project.BLL
         public List<BDO.Location> GetLocations()
         {
             List<BDO.Location> bdoLocations = new List<BDO.Location>();
-            var dalLocations = DAL.DatabaseOperations.GetLocations();
-            foreach (var item in dalLocations)
-            {
-                var bdoLocation = new BDO.Location();
-                bdoLocation.Description = item.Description;
-                bdoLocation.LocationId = item.LocId;
-                bdoLocation.Name = item.Name;
-                bdoLocations.Add(bdoLocation);
-            }
-            return bdoLocations;
+            var dalLocations = DAL.DatabaseOperations.GetLocations().ToList();
+            // foreach (var item in dalLocations)
+            // {
+            //     var bdoLocation = new BDO.Location();
+            //     bdoLocation.Description = item.Description;
+            //     bdoLocation.LocationId = item.LocId;
+            //     bdoLocation.Name = item.Name;
+            //     bdoLocations.Add(bdoLocation);
+            // }
+            // return bdoLocations;
 
+            return mapper.Map<List<BDO.Location>>(dalLocations);
             //return mapper.Map<List<DAL.Model.Location>, List<BDO.Location>> (DAL.DatabaseOperations.GetLocations());
         }
 

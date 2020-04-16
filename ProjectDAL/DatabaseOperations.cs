@@ -13,7 +13,20 @@ namespace Project.DAL
         {
             using (ProjectDBContextCF projectDBEntity = new ProjectDBContextCF())
             {  
-                return projectDBEntity.Locations.ToList();
+                return projectDBEntity
+                    .Locations
+                    .ToList();
+            }
+        }
+
+        public static List<Location> GetLocationsWithComputers()
+        {
+            using (ProjectDBContextCF projectDBEntity = new ProjectDBContextCF())
+            {  
+                return projectDBEntity
+                    .Locations
+                    .Include(i=>i.Computers)
+                    .ToList();
             }
         }
         public static int AddLocation(Location location)
