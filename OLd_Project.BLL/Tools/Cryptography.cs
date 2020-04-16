@@ -23,7 +23,7 @@ namespace Project.BLL.Tools
                     using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
                     {
                         cs.Write(clearBytes, 0, clearBytes.Length);
-                        cs.Close();
+                        cs.Dispose();
                     }
                     encryptString = Convert.ToBase64String(ms.ToArray());
                 }
@@ -48,7 +48,7 @@ namespace Project.BLL.Tools
                     using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
                     {
                         cs.Write(cipherBytes, 0, cipherBytes.Length);
-                        cs.Close();
+                        cs.Dispose();
                     }
                     cipherText = Encoding.Unicode.GetString(ms.ToArray());
                 }
